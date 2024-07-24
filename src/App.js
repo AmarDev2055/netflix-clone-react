@@ -6,8 +6,8 @@ import Player from './pages/Player';
 import TvShows from './pages/TvShows';
 import Netflex from './pages/Netflex';
 import MoviePage from './pages/MoviePage';
-import BackgroundImage from './components/BackgroundImage';
-import Header from './components/Header';
+// import BackgroundImage from './components/BackgroundImage';
+// import Header from './components/Header';
 function App() {
   return (
     <BrowserRouter>

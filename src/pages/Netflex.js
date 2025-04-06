@@ -14,8 +14,8 @@ const Netflix = () => {
 
   const navigate = useNavigate();
 
-  const movies = useSelector((state)=> state.netflix.movies)
-  const generesLoaded = useSelector((state)=>state.netflix.generesLoaded)
+  const movies = useSelector((state) => state.netflix.movies);
+  const generesLoaded = useSelector((state) => state.netflix.generesLoaded);
 
   const dispatch = useDispatch();
 
@@ -24,9 +24,9 @@ const Netflix = () => {
   }, []);
 
   useEffect(() => {
-        if(generesLoaded){
-          dispatch(fetchMovies({type: "all"}))
-        }
+    if (generesLoaded) {
+      dispatch(fetchMovies({ type: "all" }));
+    }
   });
 
   window.onscroll = () => {
@@ -64,7 +64,7 @@ const Netflix = () => {
           </div>
         </div>
       </div>
-     <SliderContainer movies={movies}/>
+      <SliderContainer movies={movies} />
     </HeroContainer>
   );
 };
@@ -88,7 +88,7 @@ const HeroContainer = styled.div`
           margin-top: 5rem;
           text-transform: uppercase;
           font-size: 50px;
-          background:white;
+          background: white;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }

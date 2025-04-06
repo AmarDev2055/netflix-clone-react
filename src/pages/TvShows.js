@@ -1,9 +1,41 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
+import { books } from "./books.js";
+import Book from "./Book";
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const TvShows = () => {
   return (
-    <div>TvShows</div>
-  )
-}
+    <Section
+      className="booklist"
+      style={{
+        backgroundColor: "white",
+        display: "grid",
+        gridTemplateColumns: "2fr 1fr",
+      }}
+    >
+      {books.map((book, bookIndex) => {
+        return <Book {...book} key={book.index} bookIndex={bookIndex} />;
+      })}
+    </Section>
+  );
+};
 
-export default TvShows
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const Section = styled.div`
+  .book {
+    color: black;
+    background-color: #e6e6e6;
+    text-align: center;
+    img {
+      height: 300px;
+      /* margin: 1rem 1rem; */
+      background-color: red;
+      padding: 1rem 1rem;
+    }
+  }
+`;
+export default TvShows;
